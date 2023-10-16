@@ -15,16 +15,20 @@ public static void main(String[] args)
         System.out.println("Invalid input. Please enter a number between 0 and 100.");
         answer = scan.nextInt();
     }
-    while (answer != randomNumber){
-      if (answer < randomNumber){
-        System.out.println("Too low! Try again.");
-        answer = scan.nextInt();
+    if (answer == randomNumber){
+    else{
+        while (answer != randomNumber){
+          if (answer < randomNumber){
+            System.out.println("Too low! Try again.");
+            answer = scan.nextInt();
       }
-      else if (answer > randomNumber){
-        System.out.println("Too high! Try again.");
-        answer = scan.nextInt();
+        else if (answer > randomNumber){
+            System.out.println("Too high! Try again.");
+            answer = scan.nextInt();
       }
     }
+    }
+}
     
 } 
    // Ask the user to guess a number from 0 to 100 
