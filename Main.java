@@ -1,7 +1,4 @@
-import java.util.Scanner;
-import java.util.Random;
-
-public class main
+public class Main
 {
 public static void main(String[] args) 
 {
@@ -14,38 +11,19 @@ public static void main(String[] args)
     while (answer < 0 || answer > 100){
         System.out.println("Invalid input. Please enter a number between 0 and 100.");
         answer = scan.nextInt();
-    }
-    if (answer == randomNumber){
-    else{
-        while (answer != randomNumber){
-          if (answer < randomNumber){
-            System.out.println("Too low! Try again.");
-            answer = scan.nextInt();
       }
+    while (answer != randomNumber){
+        if (answer < randomNumber){
+            System.out.println("Too low. Guess again.");
+            answer = scan.nextInt();
+        }
         else if (answer > randomNumber){
-            System.out.println("Too high! Try again.");
+            System.out.println("Too high. Guess again.");
             answer = scan.nextInt();
-      }
-    }
+        }
+    if (answer == randomNumber){
+        System.out.println("You guessed correctly! The number was " + randomNumber);
     }
 }
-    
-} 
-   // Ask the user to guess a number from 0 to 100 
-   // Get the first guess using scan.nextInt();
- 
-
-   // Loop while the guess does not equal the random number,
-
-     // If the guess is less than the random number, print out "Too low!"
-   
-     // If the guess is greater than the random number, print out "Too high!"
-   
-     // Get a new guess (save it into the same variable)
-   
-
-  // Print out something like "You got it!"
-
-
-  }
+}
 }
